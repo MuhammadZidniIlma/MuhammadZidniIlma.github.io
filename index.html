@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
     <!-- boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio | Zidni Ilma</title>
@@ -52,7 +55,7 @@
         class="rounded-circle img-thumbnail"
       />
       <h1 class="display-4">Muhammad Zidni Ilma</h1>
-      <p class="lead">Mahasiswa | Gamers</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,17 +71,17 @@
     <section id="About">
       <div class="container">
         <div class="row text-center">
-          <div class="col">
+          <div class="col" data-aos="fade-down" >
             <h2>About me</h2>
           </div>
         </div>
         <div class="row row justify-content-center fs-5 text-center mb-3">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>
               My Name is Muhammad Zidni Ilma from the university, high school of informatics and computer management, widya pratama or commonly called STIMIK Widya Pratama in Pekalongan City with the Informatics Engineering Study Program.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
             <p>
               I live in the city of Pekalongan, precisely in the Wiradesa sub-district. my hobbies apart from being a programmer I usually play mobile legend, pubg mobile, sausage man to push rank with friends besides that I usually lie
               down.
@@ -100,13 +103,13 @@
     <section id="Projects">
       <div class="container">
         <div class="row text-center">
-          <div class="col">
+          <div class="col" data-aos="fade-down">
             <h2>My Projects</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left"  data-aos-duration="500">
               <img src="img/Projects/1.jpeg" class="card-img-top" alt="Projects 1" />
               <div class="card-body">
                 <p class="card-text">Playing Mobile Legend with friends to riview the last skin collectors gusion.</p>
@@ -114,7 +117,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="100" data-aos-duration="500">
               <img src="img/Projects/2.jpeg" class="card-img-top" alt="Projects 2" />
               <div class="card-body">
                 <p class="card-text">Very easy game and I get win streak and it makes me bored.</p>
@@ -122,7 +125,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="500">
               <img src="img/Projects/3.jpeg" class="card-img-top" alt="Projects 3" />
               <div class="card-body">
                 <p class="card-text">The moment when slaughtering Mobile Legends Players and I got savage</p>
@@ -130,7 +133,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="300" data-aos-duration="500">
               <img src="img/Projects/4.jpeg" class="card-img-top" alt="Projects 4" />
               <div class="card-body">
                 <p class="card-text">Playing Pubg Mobile with friends fills the confusion </p>
@@ -138,7 +141,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="500">
               <img src="img/Projects/5.jpeg" class="card-img-top" alt="Projects 5" />
               <div class="card-body">
                 <p class="card-text">My profil is on sausageman who want to play with my add</p>
@@ -146,7 +149,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-duration="500">
               <img src="img/Projects/6.jpeg" class="card-img-top" alt="Projects 6" />
               <div class="card-body">
                 <p class="card-text">Play Sausageman with friends and get the win</p>
@@ -209,7 +212,24 @@
     </footer>
     <!-- akhir footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { duration: 2, delay: 1.5, text: 'Mahasiswa | Gamers'});
+    </script>
+    <script>
+      gsap.from('.jumbotron img', { duration: 1, y: -100, opacity: 0, ease : 'bounce' });
+
+      gsap.from('.navbar', { duration: 1.5, y: '-100%',  opcacity: 0 });
+
+      gsap.from('.display-4', { duration: 1, y: -50,  opcacity: 0, delay: 0.5, ease: 'back' });
+
+    </script>
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbw5RLjW75xTxMyQOg0fsb24qfQExgt3Ae9LAlEblTcyd66j17Ms5AQb6JS40RQjhn0/exec'
       const form = document.forms['Form contact']
